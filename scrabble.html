@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/scripts.js"></script>
+
+		<title>Scrabble Score</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Scrabble Score<h1>
+			<h4>Type in a word and find its score in scrabble!</h4>
+			<div class="row">
+				<div class="col-md-12">
+					<form id="form">
+						<div class="form-group">
+							<label for="input-word">Enter word</label>
+							<input type="text" class="form-control" placeholder="Enter word here" id="word-input">
+						</div>
+						<button type="submit" class="btn btn-info btn-lg">Score</button>
+					</form>
+					<div>
+						<p id="hidden">The scrabble score for <span id="word"></span> is <span id="show-score"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
