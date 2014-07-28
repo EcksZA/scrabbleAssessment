@@ -1,21 +1,19 @@
 //Creates a function to test for the scrabble score for any word.
 var scrabble = function(word) {
-//Initialise an array for scrabble letters, an array for the score of each letter, an empty arr
-	var letters = ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T", "D", "G", "B", "C", "M", "P", "F", "H", "V", "W", "Y", "K", "J", "X", "Q", "Z"];
-	var letterScore = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 8, 8, 10, 10];
+//Initialise an object for scrabble letters and related numbers
+	var letterScore = {
+		"A": 1, "E": 1, "I": 1, "O": 1, "U": 1, "L": 1, "N": 1, "R": 1, "S": 1, "T": 1,
+		"D": 2, "G": 2, "B": 3, "C": 3, "M": 3, "P": 3, "F": 4, "H": 4, "V": 4, "W": 4, 
+		"Y": 4, "K": 5, "J": 8, "X": 8, "Q": 10, "Z": 10
+	};
+
 	var wordLetters = [];
 	var totalScore = 0;
-
 	//Takes the user inputted word and splits it into an array.
 	wordLetters = word.toUpperCase().split("");
-
 	//Compares each letter in the inputted word, returns the letters score and adds up the scores for a word score. 
-	for (var j=0; j<wordLetters.length; j++) {
-		for(var i=0; i<letters.length; i++) {
-			if(wordLetters[j] === letters[i]) {
-				totalScore += letterScore[i];
-			}
-		}
+	for(var i=0; i<wordLetters.length; i++) {
+		totalScore += letterScore[wordLetters[i]];
 	}
 	return totalScore;
 }
