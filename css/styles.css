@@ -1,6 +1,9 @@
 body {
 	background-color: #BDBDBD;
+	text-align: center;
+	margin: 250px;
 }
+
 #hidden {
 	display: none;
 }
@@ -10,7 +13,9 @@ h1, h4 {
 	color: #0080FF;
 }
 
-.form-group {
+.word-input {
+	width: 500px;
+	margin-left: 318px;
 }
 
 #word, #show-score {
